@@ -1,0 +1,15 @@
+---
+httpAddress: local.guac.live:1337
+upstreamServers:
+  - http://stream.local.guac.live
+proxyLoader:
+  api: http://api.local.guac.live/edges
+  region: eu
+  domainFormat: "%s.local.guac.live"
+  apiRefreshIntervalSeconds: 1000
+  livenessCheck:
+    intervalSeconds: 1000
+    urlFormat: "http://%s"
+    successThreshold: 100
+    failureThreshold: 0
+replicationFactor: 1000

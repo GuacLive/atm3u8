@@ -117,8 +117,8 @@ func main() {
 	}
 
 	router := mux.NewRouter()
-	router.HandleFunc("/hls/{channel}/index.m3u8", handleCors(handleIndex)).Methods("GET")
-	router.HandleFunc("/hls/{channel}/index.m3u8", handleCors(handleOptions)).Methods("OPTIONS")
+	router.HandleFunc("/live/{channel}/index.m3u8", handleCors(handleIndex)).Methods("GET")
+	router.HandleFunc("/live/{channel}/index.m3u8", handleCors(handleOptions)).Methods("OPTIONS")
 
 	log.Printf("listening on: %s", config.HTTPAddress)
 

@@ -155,7 +155,7 @@ func (r *ConsistentHashBalancer) RouteSegment(sessionKey, channel, chunk string)
 	if i == len(r.hashRing) {
 		i = 0
 	}
-	url := "https://" + *r.hashRing[i].domain + "/hls/" + channel + "/" + chunk
+	url := "http://" + *r.hashRing[i].domain + "/live/" + channel + "/" + chunk
 
 	return url, nil
 }

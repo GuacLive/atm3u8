@@ -33,7 +33,7 @@ func (p *PlaylistLoader) get(url string) (*m3u8.MediaPlaylist, error) {
 }
 
 func (p *PlaylistLoader) formatURL(server, channel string) string {
-	return fmt.Sprintf("%s/hls/%s/index.m3u8", server, channel)
+	return fmt.Sprintf("%s/live/%s/index.m3u8", server, channel)
 }
 
 // Get ...
